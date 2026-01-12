@@ -54,5 +54,8 @@ class User(Base):
     # Relationship to tasks
     tasks = relationship("Task", back_populates="user", cascade="all, delete-orphan")
 
+    # Relationship to conversations
+    conversations = relationship("Conversation", back_populates="user", cascade="all, delete-orphan")
+
     def __repr__(self):
         return f"<User(user_id={self.user_id}, email={self.email})>"

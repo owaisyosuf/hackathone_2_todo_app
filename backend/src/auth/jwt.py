@@ -40,7 +40,7 @@ def create_access_token(user_id: str, email: str) -> str:
 
     token = jwt.encode(
         payload,
-        settings.JWT_SECRET,
+        settings.BETTER_AUTH_SECRET,
         algorithm=settings.JWT_ALGORITHM,
     )
 
@@ -65,7 +65,7 @@ def verify_token(token: str) -> Optional[Dict]:
     try:
         payload = jwt.decode(
             token,
-            settings.JWT_SECRET,
+            settings.BETTER_AUTH_SECRET,
             algorithms=[settings.JWT_ALGORITHM],
         )
 

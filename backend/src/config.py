@@ -17,6 +17,7 @@ class Settings(BaseSettings):
     DATABASE_URL: str
 
     # JWT Authentication
+    BETTER_AUTH_SECRET: str
     JWT_SECRET: str
     JWT_ALGORITHM: str = "HS256"
     JWT_EXPIRATION_MINUTES: int = 60
