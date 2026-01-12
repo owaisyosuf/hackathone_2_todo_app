@@ -212,6 +212,8 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 ## Active Technologies
 - Python 3.13 or higher + Standard Python libraries only (no external dependencies required) (001-todo-console-app)
 - In-memory only (no persistent storage, using Python dictionaries/lists) (001-todo-console-app)
+- Python 3.13 + FastAPI, OpenAI Agents SDK, Official MCP SDK, SQLModel, Better Auth, OpenAI ChatKit (003-todo-ai-chatbot)
+- Neon Serverless PostgreSQL (003-todo-ai-chatbot)
 
 ## Recent Changes
 - 001-todo-console-app: Added Python 3.13 or higher + Standard Python libraries only (no external dependencies required)

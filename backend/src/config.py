@@ -17,6 +17,7 @@ class Settings(BaseSettings):
     DATABASE_URL: str
 
     # JWT Authentication
+    BETTER_AUTH_SECRET: str
     JWT_SECRET: str
     JWT_ALGORITHM: str = "HS256"
     JWT_EXPIRATION_MINUTES: int = 60
@@ -28,6 +29,9 @@ class Settings(BaseSettings):
 
     # CORS
     CORS_ORIGINS: str = "http://localhost:3000,http://localhost:8000"
+
+    # AI Configuration (for chatbot feature)
+    GOOGLE_API_KEY: str = ""
 
     @property
     def cors_origins_list(self) -> List[str]:

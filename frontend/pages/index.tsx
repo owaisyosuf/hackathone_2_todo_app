@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { authAPI, taskAPI } from '../utils/api';
+import { SimpleChatWidget } from '../src/components/SimpleChatWidget';
+import { TestChat } from '../src/components/TestChat';
 
 // Define TypeScript interfaces
 interface User {
@@ -432,6 +434,9 @@ export default function Home() {
           </div>
         )}
       </main>
+
+      {/* AI Chatbot Widget */}
+      {token && <SimpleChatWidget onTaskUpdate={fetchTasks} />}
     </div>
   );
 }

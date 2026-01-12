@@ -51,10 +51,12 @@ async def health_check():
 
 
 # Register API routers
-from src.api import auth, tasks
+from src.api import auth, tasks, chat, chat_simple
 
 app.include_router(auth.router, prefix="/auth", tags=["Authentication"])
 app.include_router(tasks.router, prefix="/tasks", tags=["Tasks"])
+app.include_router(chat.router, prefix="/chat", tags=["Chat"])
+app.include_router(chat_simple.router, prefix="/chat", tags=["Chat Simple"])
 
 
 # Global exception handlers
